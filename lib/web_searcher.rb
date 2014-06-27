@@ -2,7 +2,7 @@ require 'open-uri'
 
 class WebSearcher
   
-  # Search for html strings html at url
+  # Search for html strings in html at url
   #  removing whitespace is the only massaging done for the search in this implementation
   def self.find_html_in_site(html_items, url)
     result = {}
