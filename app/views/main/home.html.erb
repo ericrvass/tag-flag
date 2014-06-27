@@ -16,7 +16,7 @@
             <label for="url"><%= t('search_form.url_input_label') %></label>
             <%= text_field_tag 'url', nil, :class => "form-control" %>
           </div>
-          <%= submit_tag t('search_form.submit'), :class => "btn btn-primary" %>
+          <%= submit_tag t('search_form.submit'), :class => "btn btn-primary", :id => "submit_button", :data => {'loading-text' => t('loading')} %>
         <% end %>
       </div>
     </div>
