@@ -28,7 +28,6 @@ class MainController < ApplicationController
           :created_at => t.created_at,
           :duration => t.duration
         }
-      puts result.to_json
       render json: result
     else
       render json: {:status => 'error'}

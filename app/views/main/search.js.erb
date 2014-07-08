@@ -1,7 +1,7 @@
 var timeoutHandle = setInterval(function() {GetProgress()}, 10000);
 var tries = 1;
 function GetProgress() {
-  if (tries < 12) {
+  if (tries < 20) {
     $.ajax({
       url: "/check_progress/<%= @task_id %>",
       dataType: "json",
