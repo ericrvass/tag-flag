@@ -7,8 +7,8 @@
       <div class="panel-body">
         <%= form_tag(search_path(), :method => :post, :remote => true, :id => "search_form", :role => "form") do %>
           <div class="form-group">
-            <label for="html_block"><%= t('search_form.html_input_label') %></label>
-            <%= text_area_tag 'html_block[]', nil, :rows => 6, :class => "form-control html-input" %>
+            <label for="selectors"><%= t('search_form.html_input_label') %></label>
+            <%= text_field_tag 'selectors[]', nil, :class => "form-control html-input" %>
           </div>
           <%= link_to "<div class='btn btn-sm btn-default'>+</div>".html_safe, "#", class: "add_search_input_link" %>
           <div style="clear:both;"></div>

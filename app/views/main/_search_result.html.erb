@@ -1,4 +1,4 @@
-<% @result.each do |html_block, found| %>
+<% result.each do |html_block, found| %>
   <div class="alert <%= found ? 'alert-success' : 'alert-danger' %>" role="alert">
     <strong><%= found ? t('search_result.found') : t('search_result.missing') %>: </strong><br />
     <samp><%= html_block %></samp>

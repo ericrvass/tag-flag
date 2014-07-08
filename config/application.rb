@@ -19,5 +19,10 @@ module TagFlag
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    
+    iw_config = YAML.load_file(File.join(Rails.root, "config/ironworker.yml"))
+    config.iron_config = iw_config
+    config.iw_client = IronWorkerNG::Client.new(:token => iw_config['token'], :project_id => iw_config['project_id'])
+   
   end
 end

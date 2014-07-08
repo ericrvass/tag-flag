@@ -29,6 +29,9 @@ gem 'spring',        group: :development
 # heroku support
 gem 'rails_12factor', group: :production
 
+# ironworker
+gem 'iron_worker_ng'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -10,12 +10,9 @@ $(document).ready ->
     e.preventDefault()
     false
   $("#submit_button").click (e) ->
+    $("#result").html('');
     $("#submit_button").button "loading"
     $("#search_form").submit();
-    setTimeout (->
-      $("#submit_button").button  "reset"
-      return
-    ), 3000
     e.preventDefault()
     false
   return

@@ -1,0 +1,8 @@
+runtime "binary"
+exec "run.sh"
+
+# Include the Javascript file that Phantom will execute
+file "hastags.js"
+
+remote_build_command 'curl http://phantomjs.googlecode.com/files/phantomjs-1.6.1-linux-x86_64-dynamic.tar.bz2 -o p.tar.bz2 && tar xf p.tar.bz2 && rm p.tar.bz2'
+

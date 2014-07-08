@@ -22,10 +22,10 @@
 en:
   window_title: "TagFlag.org"
   header_title: "TagFlag.org" 
-  search_title: "Enter an HTML block(s) to search and a URL to search on"
+  search_title: "Enter an CSS Selector(s) to search and a URL to search on"
   loading: "Loading..."
   search_form:
-    html_input_label: "HTML"
+    html_input_label: "Selector"
     url_input_label: "URL"
     submit: "Submit"
   search_result:

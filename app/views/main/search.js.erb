@@ -1,2 +1,36 @@
-$("#result").html("<%= raw escape_javascript(render(:partial => 'search_result')) %>");
-$("#submit_button").button('reset');
+var timeoutHandle = setInterval(function() {GetProgress()}, 10000);
+var tries = 1;
+function GetProgress() {
+  if (tries < 12) {
+    $.ajax({
+      url: "/check_progress/<%= @task_id %>",
+      dataType: "json",
+      success: function (msg) {
+        var status = msg["status"];
+        if ("complete" == status) {
+          GetResult();
+        } else {
+          $("#submit_button").val(status + "...");
+          window.clearTimeout(timeoutHandle);
+          timeoutHandle = setTimeout(function() {GetProgress()}, 5000 * tries);
+        }
+        tries++;
+      }
+    });
+  }
+  else {
+    $("#submit_button").button('reset');
+    $("#submit_button").val("Timed Out!");
+  }
+}
+function GetResult() {
+  $.ajax({
+    url: "/search_result/<%= @task_id %>",
+    context: document.body,
+    success: function(responseText) {
+      eval(responseText);
+      $("#submit_button").button('reset');
+      $("#submit_button").val("Submit");
+    }
+  });
+}
