@@ -21,7 +21,7 @@ class WebSearcher
     request = {"url" => url}
     request = request.merge({"selectors" => selectors})
     task_id = client.tasks.create('phantom', request.to_json)
-    return task_id[:id]
+    return task_id.id
   end
   
 end

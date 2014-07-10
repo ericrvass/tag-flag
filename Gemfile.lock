@@ -61,7 +61,6 @@ GEM
     multi_json (1.10.1)
     net-http-persistent (2.9.4)
     netrc (0.7.7)
-    pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -136,7 +135,6 @@ DEPENDENCIES
   iron_worker_ng
   jbuilder (~> 2.0)
   jquery-rails
-  pg
   rails (= 4.1.0)
   rails_12factor
   sass-rails (~> 4.0.3)
