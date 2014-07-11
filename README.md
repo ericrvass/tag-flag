@@ -1,7 +1,7 @@
 tag-flag
 ========
 
-The HTML Selector Site Searcher
+CSS Selector Web Site Searcher w/ API
 
 Try it at http://tagflag.org
 
