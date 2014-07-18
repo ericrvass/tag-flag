@@ -3,6 +3,18 @@ try {
   var url = json_input["url"];
   var page = require('webpage').create();
   if (url) {
+    var resources = json_input["resources"];
+    page.onResourceRequested = function(requestData, networkRequest) {
+      if (resources) {
+        resources.forEach(function(resource) {  
+          if (requestData.url == resource) {
+            var result = {};
+            result[resource] = true;
+            console.log(JSON.stringify(result));
+          }
+        });
+      }
+    };
     // open the page
     page.open(url, function (status) {
       if (status !== 'success') {
@@ -21,7 +33,9 @@ try {
               }, selector);
             });
           }
-          console.log(JSON.stringify(result));
+          if (Object.keys(result).length > 0) {
+            console.log(JSON.stringify(result));
+          }
           phantom.exit();
         }, 4000);
       }
