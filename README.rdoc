@@ -1,6 +1,5 @@
 == README
 
-Try it at http://tagflag.org
 
 == Getting Started
 
