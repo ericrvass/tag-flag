@@ -3,7 +3,6 @@ tag-flag
 
 CSS Selector Web Site Searcher w/ API
 
-Try it at http://tagflag.org
 
 Getting Started
 ===============
